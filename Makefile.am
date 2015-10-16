@@ -1,5 +1,5 @@
 PACKAGE = @PACKAGE_TARNAME@
 SUBDIRS = src doc
-doc_DATA = AUTHORS COPYING ChangeLog README NEWS
+doc_DATA = AUTHORS COPYING ChangeLog README.md NEWS
 
-EXTRA_DIST = README cygwin_post_install.sh
+EXTRA_DIST = README.md cygwin_post_install.sh
