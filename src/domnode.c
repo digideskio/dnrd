@@ -26,6 +26,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -157,7 +158,7 @@ domnode_t *search_subdomnode(domnode_t *head, const char *name,
        will be encoded as "\3yes\3org" while hayes.org will be encoded
        as "\5hayes\3org"
     */
-    if ((strncmp(d->domain, p, maxlen - (p - name)) == 0) && (h > maxfound)) {
+    if ((strncasecmp(d->domain, p, maxlen - (p - name)) == 0) && (h > maxfound)) {
       maxfound = h; /* max length found */
       curr = d;
     }
